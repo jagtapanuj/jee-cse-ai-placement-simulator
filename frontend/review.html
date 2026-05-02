@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Program Review Checklist - Maharashtra Simulator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">Internal review • local checklist • source-gated</p>
+      <h1>Program Review Checklist</h1>
+      <p Review Checklist - Maharashtra Simulator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <p class="ey class="sub">
+        This page helps review one program row before it can ever become public-ready.
+        It does not edit the dataset, publish rows, or change scores.
+      </p>
+      <div class="warning">
+        Local checklist values are saved only in this browser through localStorage.
+        They are review notes, not official data updates.
+      </div>
+      <p>
+        <a href="/queue.html">← Back to verification queue</a>
+        &nbsp; | &nbsp;
+        <a href="/">Back to simulator</a>
+      </p>
+    </section>
+
+    <section id="programSummary" class="summary"></section>
+
+    <section class="card">
+      <h2>Verification checklist</h2>
+      <p class="muted">Use this checklist to decide what evidence is still missing.</p>
+
+      <div class="checklist">
+        <label class="check"><input type="checkbox" data-check="cutoff_verified" /> Admission cutoff row verified from official source</label>
+        <label class="check"><input type="checkbox" data-check="rank_type_verified" /> Rank type / route verified correctly, such as MHT-CET merit vs JEE Main CRL</label>
+        <label class="check"><input type="checkbox" data-check="placement_denominator_verified" /> Placement denominator verified: total / eligible / opted / placed / higher studies</label>
+        <label class="check"><input type="checkbox" data-check="salary_verified" /> Salary values verified: median / average / highest, with year and branch</label>
+        <label class="check"><input type="checkbox" data-check="fee_verified" /> Fee evidence verified from official fee notice or institute page</label>
+        <label class="check"><input type="checkbox" data-check="source_links_working" /> Source links open correctly</label>
+        <label class="check"><input type="checkbox" data-check="warnings_clear" /> Warnings are clear and not misleading</label>
+        <label class="check"><input type="checkbox" data-check="ready_for_second_review" /> Ready for second review</label>
+      </div>
+
+      <label>
+        Review notes
+        <textarea id="reviewNotes" rows="8" placeholder="Write what is missing, source page number, exact table, contradiction, or next verification action..."></textarea>
+      </label>
+
+      <label>
+        Last checked date
+        <input id="lastCheckedDate" type="date" />
+      </label>
+
+      <div class="actions">
+        <button id="saveReviewBtn">Save local review</button>
+        <button id="exportReviewBtn" class="secondary">Export review JSON</button>
+        <button id="clearReviewBtn" class="secondary">Clear local review</button>
+      </div>
+
+      <pre id="exportBox" class="export-box hidden"></pre>
+    </section>
+
+    <section id="sourceEvidence" class="results"></section>
+  </main>
+
+  <script src="review.js"></script>
+</body>
+</html>

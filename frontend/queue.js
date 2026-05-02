@@ -118,6 +118,7 @@ function renderQueue() {
       <div class="warn">
         Internal only. Do not make this row default-visible until the verification checklist is complete.
       </div>
+      <p><a href="/review.html?program_key=${encodeURIComponent(row.program_key)}">Open row review checklist</a></p>
     `;
     queueEl.appendChild(item);
   });
