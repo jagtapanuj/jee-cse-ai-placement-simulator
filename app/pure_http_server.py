@@ -5,7 +5,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
-from .simulator_core import compare, list_programs, simulate, source_drawer
+from .simulator_core import compare, data_quality_summary, list_programs, simulate, source_drawer
 
 ROOT = Path(__file__).resolve().parents[1]
 FRONTEND_DIR = ROOT / "frontend"
@@ -45,11 +45,22 @@ class Handler(BaseHTTPRequestHandler):
         parsed = urlparse(self.path)
         params = parse_qs(parsed.query)
         path = parsed.path
+
         try:
             if path == "/api/health":
-                return self._send_json({"status": "ok", "data_version": "maharashtra-v6-localapp-v7"})
+                return self._send_json({
+                    "status": "ok",
+                    "data_version": "maharashtra-v6-localapp-v8-patch",
+                })
+
+            if path == "/api/data-quality":
+                return self._send_json(data_quality_summary())
+
             if path == "/api/programs":
-                return self._send_json({"programs": list_programs(_bool(params.get("include_partial", [""])[0]))})
+                return self._send_json({
+                    "programs": list_programs(_bool(params.get("include_partial", [""])[0]))
+                })
+
             if path == "/api/simulate":
                 rank_raw = params.get("rank", [None])[0]
                 rank = int(rank_raw) if rank_raw else None
@@ -60,14 +71,19 @@ class Handler(BaseHTTPRequestHandler):
                     branch_query=params.get("branch", [None])[0],
                     max_results=int(params.get("max_results", ["25"])[0]),
                 ))
+
             if path.startswith("/api/sources/"):
                 return self._send_json(source_drawer(path.rsplit("/", 1)[-1]))
+
             if path == "/" or path == "/index.html":
                 return self._send_file(FRONTEND_DIR / "index.html")
+
             frontend_path = (FRONTEND_DIR / path.lstrip("/")).resolve()
             if str(frontend_path).startswith(str(FRONTEND_DIR.resolve())):
                 return self._send_file(frontend_path)
+
             self.send_error(404)
+
         except Exception as exc:
             self._send_json({"error": str(exc)}, status=400)
 
