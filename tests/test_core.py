@@ -1,7 +1,7 @@
 import unittest
 
 from app.data_loader import load_programs
-from app.simulator_core import admission_bucket, compare, simulate, source_drawer
+from app.simulator_core import admission_bucket, compare, data_quality_summary, simulate, source_drawer
 
 
 class SimulatorCoreTests(unittest.TestCase):
@@ -47,6 +47,14 @@ class SimulatorCoreTests(unittest.TestCase):
         self.assertLessEqual(len(default), len(internal))
         for row in default:
             self.assertTrue(row["publish_default"])
+
+    def test_data_quality_summary_is_read_only_and_conservative(self):
+        summary = data_quality_summary()
+        self.assertEqual(summary["summary"]["total_program_rows"], 15)
+        self.assertEqual(summary["summary"]["default_visible_rows"], 1)
+        self.assertEqual(summary["summary"]["hidden_pending_verification_rows"], 14)
+        self.assertGreater(len(summary["hidden_blockers"]), 0)
+        self.assertIn("safety_gate", summary)
 
 
 if __name__ == "__main__":
