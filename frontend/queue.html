@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Verification Queue - Maharashtra Simulator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">Internal pilot • read-only • source-gated</p>
+      <h1>Verification Queue</h1>
+      <p class="sub">
+        This page lists hidden rows and their blockers using the existing data-quality endpoint.
+        It does not edit college data, publish rows, or change scores.
+      </p>
+      <div class="warning">
+        Rows shown here are not public-ready. Do not promote any row until source, cutoff,
+        denominator, fee, confidence, and last-verified checks pass.
+      </div>
+      <p><a href="/">← Back to simulator</a></p>
+    </section>
+
+    <section id="queueSummary" class="summary"></section>
+
+    <section class="card form-card">
+      <label>
+        Filter queue
+        <input id="filterBox" type="search" placeholder="Search college, program, route, blocker..." />
+      </label>
+      <label>
+        Status filter
+        <select id="statusFilter">
+          <option value="">All statuses</option>
+        </select>
+      </label>
+      <button id="refreshBtn">Refresh queue</button>
+    </section>
+
+    <section id="queue" class="results"></section>
+  </main>
+
+  <script src="queue.js"></script>
+</body>
+</html>
