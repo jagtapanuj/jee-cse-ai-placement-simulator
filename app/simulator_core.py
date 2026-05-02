@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from collections import Counter
 from typing import Any, Dict, Iterable, List, Optional
 
 from .data_loader import get_program, load_programs, load_quality_audit, load_sources
@@ -50,6 +51,67 @@ def list_programs(include_partial: bool = False) -> List[Dict[str, Any]]:
     return [p.public_dict() for p in visibility_filter(load_programs(), include_partial)]
 
 
+def data_quality_summary() -> Dict[str, Any]:
+    """Return a data-readiness summary for the local pilot.
+
+    This endpoint is deliberately read-only. It does not promote any hidden row.
+    It is meant to help the project owner/admin see why rows are blocked.
+    """
+    programs = load_programs()
+    sources = load_sources()
+    audit = load_quality_audit()
+
+    status_counts = Counter(p.data_quality_status or "UNKNOWN" for p in programs)
+    route_counts = Counter(p.route or "UNKNOWN_ROUTE" for p in programs)
+    placement_status_counts = Counter(p.placement_status or "UNKNOWN_PLACEMENT_STATUS" for p in programs)
+
+    hidden_rows = [p for p in programs if not p.publish_default]
+    default_rows = [p for p in programs if p.publish_default]
+
+    missing_cutoff = [
+        p for p in programs
+        if "no_verified_cutoff" in (p.admission_cutoff_status or "").lower()
+        or "staged" in (p.admission_cutoff_status or "").lower()
+    ]
+    missing_or_partial_placement = [
+        p for p in programs if p.data_quality_status != "PILOT_SCORE_READY_VERIFIED"
+    ]
+    missing_sources = [p for p in programs if not p.source_url_list()]
+
+    hidden_blockers = []
+    for p in hidden_rows:
+        hidden_blockers.append({
+            "program_key": p.program_key,
+            "college": p.college,
+            "program": p.program,
+            "route": p.route,
+            "data_quality_status": p.data_quality_status,
+            "placement_status": p.placement_status,
+            "admission_cutoff_status": p.admission_cutoff_status,
+            "why_not_ready": p.why_not_ready,
+            "source_count": len(p.source_url_list()),
+        })
+
+    return {
+        "data_version": "maharashtra-v6-localapp-v8-patch",
+        "summary": {
+            "total_program_rows": len(programs),
+            "default_visible_rows": len(default_rows),
+            "hidden_pending_verification_rows": len(hidden_rows),
+            "source_register_rows": len(sources),
+            "quality_audit_rows": len(audit),
+            "rows_missing_or_staged_cutoff": len(missing_cutoff),
+            "rows_partial_or_not_public": len(missing_or_partial_placement),
+            "rows_missing_source_urls": len(missing_sources),
+        },
+        "status_counts": dict(status_counts),
+        "route_counts": dict(route_counts),
+        "placement_status_counts": dict(placement_status_counts),
+        "hidden_blockers": hidden_blockers,
+        "safety_gate": "Only publish_default=yes rows are visible by default. Hidden rows must remain internal until source, cutoff, denominator, fee, confidence, and last-verified checks pass.",
+    }
+
+
 def source_drawer(program_key: str) -> Dict[str, Any]:
     program = get_program(program_key)
     if not program:
@@ -76,7 +138,13 @@ def compare(program_keys: List[str], include_partial: bool = False) -> List[Dict
         if key not in allowed_keys:
             continue
         results.append(program.public_dict())
-    results.sort(key=lambda x: (x.get("internal_job_score_v3") is not None, x.get("internal_job_score_v3") or 0), reverse=True)
+    results.sort(
+        key=lambda x: (
+            x.get("internal_job_score_v3") is not None,
+            x.get("internal_job_score_v3") or 0,
+        ),
+        reverse=True,
+    )
     return results
 
 
@@ -127,10 +195,21 @@ def simulate(
             "source_count": len(p.source_url_list()),
         })
 
-    rows.sort(key=lambda x: (x.get("publish_default", False), x.get("job_strength_score") or 0), reverse=True)
+    rows.sort(
+        key=lambda x: (
+            x.get("publish_default", False),
+            x.get("job_strength_score") or 0,
+        ),
+        reverse=True,
+    )
     return {
-        "data_version": "maharashtra-v6-localapp-v7",
-        "input": {"rank": rank, "rank_type": rank_type, "include_partial": include_partial, "branch_query": branch_query},
+        "data_version": "maharashtra-v6-localapp-v8-patch",
+        "input": {
+            "rank": rank,
+            "rank_type": rank_type,
+            "include_partial": include_partial,
+            "branch_query": branch_query,
+        },
         "safety_gate": "Default output includes only publish_default=yes rows. Use include_partial=true only for internal testing.",
         "results": rows[:max_results],
         "counts": {
@@ -149,8 +228,16 @@ def main() -> None:
     parser.add_argument("--include-partial", action="store_true", help="Show rows hidden by default. Internal testing only.")
     parser.add_argument("--branch", default=None)
     parser.add_argument("--max-results", type=int, default=25)
+    parser.add_argument("--data-quality", action="store_true", help="Print data-quality summary instead of simulation results.")
     args = parser.parse_args()
-    print(json.dumps(simulate(args.rank, args.rank_type, args.include_partial, args.branch, args.max_results), indent=2))
+
+    if args.data_quality:
+        print(json.dumps(data_quality_summary(), indent=2))
+    else:
+        print(json.dumps(
+            simulate(args.rank, args.rank_type, args.include_partial, args.branch, args.max_results),
+            indent=2,
+        ))
 
 
 if __name__ == "__main__":
