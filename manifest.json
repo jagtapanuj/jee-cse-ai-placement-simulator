@@ -1,0 +1,180 @@
+{
+  "package": "Maharashtra_Simulator_LocalApp_v7",
+  "files": [
+    {
+      "path": "README.md",
+      "size": 2018,
+      "sha256_16": "5000807f1433dc98"
+    },
+    {
+      "path": "RUN_LOCAL.md",
+      "size": 539,
+      "sha256_16": "9f332a3a1bfeb3fd"
+    },
+    {
+      "path": "api/openapi_v6_source.yaml",
+      "size": 850,
+      "sha256_16": "5d7f4237a4dea93d"
+    },
+    {
+      "path": "api/openapi_v7.yaml",
+      "size": 2005,
+      "sha256_16": "a5f40a4d0e7ccfe4"
+    },
+    {
+      "path": "app/__init__.py",
+      "size": 94,
+      "sha256_16": "ad3c574e84cc9301"
+    },
+    {
+      "path": "app/__pycache__/__init__.cpython-313.pyc",
+      "size": 265,
+      "sha256_16": "190a0b84dad18bf1"
+    },
+    {
+      "path": "app/__pycache__/data_loader.cpython-313.pyc",
+      "size": 3129,
+      "sha256_16": "2c6eb2cde17b2137"
+    },
+    {
+      "path": "app/__pycache__/models.cpython-313.pyc",
+      "size": 5189,
+      "sha256_16": "89010d0a50d2c24b"
+    },
+    {
+      "path": "app/__pycache__/simulator_core.cpython-313.pyc",
+      "size": 9567,
+      "sha256_16": "854c1cbde61719ba"
+    },
+    {
+      "path": "app/api_app.py",
+      "size": 2207,
+      "sha256_16": "19806e01fcfe2614"
+    },
+    {
+      "path": "app/data_loader.py",
+      "size": 1379,
+      "sha256_16": "3feebb7ae3607ec1"
+    },
+    {
+      "path": "app/models.py",
+      "size": 3209,
+      "sha256_16": "9594feea7d3307cf"
+    },
+    {
+      "path": "app/pure_http_server.py",
+      "size": 3271,
+      "sha256_16": "5fd1b0ac525e213e"
+    },
+    {
+      "path": "app/simulator_core.py",
+      "size": 6796,
+      "sha256_16": "7f6d156d710baf71"
+    },
+    {
+      "path": "data/data_quality_audit.csv",
+      "size": 4648,
+      "sha256_16": "7273915eb82d6459"
+    },
+    {
+      "path": "data/programs.csv",
+      "size": 6420,
+      "sha256_16": "43749f683ab27fd0"
+    },
+    {
+      "path": "data/source_register.csv",
+      "size": 10320,
+      "sha256_16": "5d368961cbe7e84c"
+    },
+    {
+      "path": "docs/CODEX_HANDOFF.md",
+      "size": 1089,
+      "sha256_16": "78c178cbef11555b"
+    },
+    {
+      "path": "docs/DATA_CORRECTNESS_GATE.md",
+      "size": 623,
+      "sha256_16": "4c3114c21f464b15"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_STATUS_v7.md",
+      "size": 988,
+      "sha256_16": "2e7cd4f401e409b2"
+    },
+    {
+      "path": "frontend/app.js",
+      "size": 2175,
+      "sha256_16": "1dbcf11e23e433d5"
+    },
+    {
+      "path": "frontend/index.html",
+      "size": 1679,
+      "sha256_16": "cdc99d7fc04eca47"
+    },
+    {
+      "path": "frontend/styles.css",
+      "size": 2089,
+      "sha256_16": "b56d48c253238327"
+    },
+    {
+      "path": "requirements.txt",
+      "size": 53,
+      "sha256_16": "24ed2135bdcecba8"
+    },
+    {
+      "path": "sample_outputs/default_simulation.json",
+      "size": 1085,
+      "sha256_16": "240167e8b1c29f61"
+    },
+    {
+      "path": "sample_outputs/internal_simulation.json",
+      "size": 11966,
+      "sha256_16": "1c0c62f26bd6cadc"
+    },
+    {
+      "path": "sample_outputs/source_drawer_default_row.json",
+      "size": 2842,
+      "sha256_16": "1eefa07223112ec1"
+    },
+    {
+      "path": "sample_outputs/test_run.txt",
+      "size": 0,
+      "sha256_16": "e3b0c44298fc1c14"
+    },
+    {
+      "path": "scripts/create_github_repo_steps.md",
+      "size": 472,
+      "sha256_16": "5270a598e4417b33"
+    },
+    {
+      "path": "sql/005_v6_schema.sql",
+      "size": 1069,
+      "sha256_16": "222e689de308409e"
+    },
+    {
+      "path": "sql/006_v6_seed.sql",
+      "size": 17776,
+      "sha256_16": "3eb458dafac0702d"
+    },
+    {
+      "path": "tests/__pycache__/test_core.cpython-313.pyc",
+      "size": 4891,
+      "sha256_16": "985a8dc6642ef89e"
+    },
+    {
+      "path": "tests/__pycache__/test_data_quality.cpython-313.pyc",
+      "size": 2433,
+      "sha256_16": "caae84bd99344c05"
+    },
+    {
+      "path": "tests/test_core.py",
+      "size": 2577,
+      "sha256_16": "9ad562514e4caea7"
+    },
+    {
+      "path": "tests/test_data_quality.py",
+      "size": 1070,
+      "sha256_16": "f9399f97adcf36e9"
+    }
+  ]
+}

@@ -23,6 +23,7 @@ By default, the API returns only rows with `publish_default = yes`. Use `include
 ## Quick start without dependencies
 
 ```bash
+cd Maharashtra_Simulator_LocalApp_v7
 python -m app.pure_http_server
 ```
 

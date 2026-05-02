@@ -1,0 +1,64 @@
+openapi: 3.0.3
+info:
+  title: Maharashtra CSE/AI Job & Placement Simulator API
+  version: 0.7.0
+  description: Pilot API with strict publish_default safety gate.
+paths:
+  /health:
+    get:
+      summary: Health check
+      responses:
+        '200': { description: OK }
+  /programs:
+    get:
+      summary: List programs visible under the safety gate
+      parameters:
+        - in: query
+          name: include_partial
+          schema: { type: boolean, default: false }
+      responses:
+        '200': { description: Program list }
+  /simulate:
+    post:
+      summary: Run admission feasibility plus job-strength simulation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rank: { type: integer, nullable: true }
+                rank_type: { type: string, enum: [UNKNOWN, MHT_CET_MERIT, JEE_MAIN_CRL, JEE_MAIN_CATEGORY], default: UNKNOWN }
+                include_partial: { type: boolean, default: false }
+                branch_query: { type: string, nullable: true }
+                max_results: { type: integer, default: 25 }
+      responses:
+        '200': { description: Simulation results }
+  /compare:
+    post:
+      summary: Compare selected program keys
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                program_keys:
+                  type: array
+                  items: { type: string }
+                include_partial: { type: boolean, default: false }
+      responses:
+        '200': { description: Compare results }
+  /sources/{program_key}:
+    get:
+      summary: Source drawer for a program
+      parameters:
+        - in: path
+          name: program_key
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Source drawer }
+        '404': { description: Program not found }

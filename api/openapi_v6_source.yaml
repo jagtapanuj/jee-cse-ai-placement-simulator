@@ -1,0 +1,30 @@
+openapi: 3.1.0
+info:
+  title: JEE Main CSE/AI Maharashtra Pilot Simulator API
+  version: v6-pilot
+  description: Safety-first local API. Default responses hide partial/provisional/staged rows.
+paths:
+  /health:
+    get:
+      responses:
+        '200': {description: OK}
+  /programs:
+    get:
+      parameters:
+        - name: include_partial
+          in: query
+          schema: {type: boolean, default: false}
+      responses:
+        '200': {description: Program rows gated by data quality}
+  /simulate:
+    get:
+      parameters:
+        - name: rank
+          in: query
+          required: true
+          schema: {type: number}
+        - name: include_partial
+          in: query
+          schema: {type: boolean, default: false}
+      responses:
+        '200': {description: Admission buckets + internal job scores, with data-quality warnings}

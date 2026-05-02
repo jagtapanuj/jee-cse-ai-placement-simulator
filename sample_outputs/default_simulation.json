@@ -1,0 +1,36 @@
+{
+  "data_version": "maharashtra-v6-localapp-v7",
+  "input": {
+    "rank": 300,
+    "rank_type": "MHT_CET_MERIT",
+    "include_partial": false,
+    "branch_query": null
+  },
+  "safety_gate": "Default output includes only publish_default=yes rows. Use include_partial=true only for internal testing.",
+  "results": [
+    {
+      "program_key": "PROG-V5-004",
+      "college": "SPIT Mumbai",
+      "program": "CSE-AIML",
+      "route": "MHT-CET CAP + Institute",
+      "admission_bucket": "LIKELY_TARGET",
+      "closing_rank_or_merit": 324,
+      "closing_score": 99.8607121,
+      "job_strength_score": 82.3,
+      "placement_confidence": 94.0,
+      "placement_status": "Score-ready for pilot",
+      "data_quality_status": "PILOT_SCORE_READY_VERIFIED",
+      "publish_default": true,
+      "warnings": [
+        "Allowed for pilot only; still requires final user review before public release."
+      ],
+      "source_count": 1
+    }
+  ],
+  "counts": {
+    "total_loaded": 15,
+    "visible_returned": 1,
+    "default_publishable_total": 1,
+    "hidden_pending_verification": 14
+  }
+}

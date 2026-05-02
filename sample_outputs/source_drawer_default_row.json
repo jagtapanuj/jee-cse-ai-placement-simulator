@@ -1,0 +1,68 @@
+{
+  "program": {
+    "program_key": "PROG-V5-004",
+    "college": "SPIT Mumbai",
+    "program": "CSE-AIML",
+    "route": "MHT-CET CAP + Institute",
+    "admission_cutoff_status": "Verified official",
+    "admission_seat_type": "GOPENS",
+    "closing_rank_or_merit": 324,
+    "closing_score": 99.8607121,
+    "placement_status": "Score-ready for pilot",
+    "placement_confidence": 94.0,
+    "placement_score": 75.9,
+    "salary_score": 91.1,
+    "roi_score_fee_only": 55.0,
+    "branch_score": 100.0,
+    "internal_job_score_v3": 82.3,
+    "data_quality_status": "PILOT_SCORE_READY_VERIFIED",
+    "publish_default": true,
+    "why_not_ready": "Allowed for pilot only; still requires final user review before public release.",
+    "source_urls": [
+      "https://placements.spit.ac.in/assets/2025_summary-DqkohFsi.pdf"
+    ]
+  },
+  "program_source_urls": [
+    "https://placements.spit.ac.in/assets/2025_summary-DqkohFsi.pdf"
+  ],
+  "college_sources": [
+    {
+      "source_id": "SRC-SPIT-CAPR-I-03215",
+      "college": "SPIT Mumbai",
+      "category": "Admission cutoff",
+      "source_type": "Official CET Cell CAP Round I PDF",
+      "year": "2025-26",
+      "url": "https://fe2025.mahacet.org/CAP-I/CAPR-I_03215.pdf",
+      "use_status": "source_indexed_needs_row_extraction",
+      "notes": "Official CAP-I PDF for SPIT. Use parser and manual verification before production.",
+      "access_date": "2026-05-02",
+      "v6_gate_note": "Official source indexed/used; values still require row-level source mapping before public release unless already marked used_verified."
+    },
+    {
+      "source_id": "SRC-SPIT-CAP3-2024-25",
+      "college": "SPIT Mumbai",
+      "category": "Admission cutoff",
+      "source_type": "Official CET Cell CAP Round III PDF",
+      "year": "2024-25",
+      "url": "https://fe2025.mahacet.org/2024/2024ENGG_CAP3_CutOff.pdf",
+      "use_status": "used_verified",
+      "notes": "SPIT Round III rows already staged and verified in previous pack.",
+      "access_date": "2026-05-02",
+      "v6_gate_note": "Official source indexed/used; values still require row-level source mapping before public release unless already marked used_verified."
+    }
+  ],
+  "quality_audit": [
+    {
+      "program_key": "PROG-V5-004",
+      "college": "SPIT Mumbai",
+      "program": "CSE-AIML",
+      "publish_default": "yes",
+      "data_quality_status": "PILOT_SCORE_READY_VERIFIED",
+      "issues": "no_blocking_issue_for_pilot",
+      "required_next_action": "Can be used in local pilot only; still needs final review before public launch.",
+      "source_urls": "https://placements.spit.ac.in/assets/2025_summary-DqkohFsi.pdf"
+    }
+  ],
+  "manual_verification_required": false,
+  "warning": "Use as public data only after row-level source, year, branch/program, denominator, confidence, and last-verified checks pass."
+}

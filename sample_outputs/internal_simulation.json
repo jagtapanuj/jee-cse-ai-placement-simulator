@@ -1,0 +1,318 @@
+{
+  "data_version": "maharashtra-v6-localapp-v7",
+  "input": {
+    "rank": 300,
+    "rank_type": "MHT_CET_MERIT",
+    "include_partial": true,
+    "branch_query": null
+  },
+  "safety_gate": "Default output includes only publish_default=yes rows. Use include_partial=true only for internal testing.",
+  "results": [
+    {
+      "program_key": "PROG-V5-004",
+      "college": "SPIT Mumbai",
+      "program": "CSE-AIML",
+      "route": "MHT-CET CAP + Institute",
+      "admission_bucket": "LIKELY_TARGET",
+      "closing_rank_or_merit": 324,
+      "closing_score": 99.8607121,
+      "job_strength_score": 82.3,
+      "placement_confidence": 94.0,
+      "placement_status": "Score-ready for pilot",
+      "data_quality_status": "PILOT_SCORE_READY_VERIFIED",
+      "publish_default": true,
+      "warnings": [
+        "Allowed for pilot only; still requires final user review before public release."
+      ],
+      "source_count": 1
+    },
+    {
+      "program_key": "PROG-V5-005",
+      "college": "SPIT Mumbai",
+      "program": "CSE-DS",
+      "route": "MHT-CET CAP + Institute",
+      "admission_bucket": "NEEDS_VERIFIED_CUTOFF",
+      "closing_rank_or_merit": null,
+      "closing_score": null,
+      "job_strength_score": 85.0,
+      "placement_confidence": 94.0,
+      "placement_status": "Score-ready for pilot",
+      "data_quality_status": "PARTIAL_NOT_PUBLIC",
+      "publish_default": false,
+      "warnings": [
+        "Hidden by default: not public score-ready yet.",
+        "Data quality status: PARTIAL_NOT_PUBLIC.",
+        "Needs verified cutoff row and/or missing placement denominator/median/fee fields before public scoring."
+      ],
+      "source_count": 1
+    },
+    {
+      "program_key": "PROG-V5-003",
+      "college": "SPIT Mumbai",
+      "program": "COMP",
+      "route": "MHT-CET CAP + Institute",
+      "admission_bucket": "NEEDS_VERIFIED_CUTOFF",
+      "closing_rank_or_merit": null,
+      "closing_score": null,
+      "job_strength_score": 83.3,
+      "placement_confidence": 96.0,
+      "placement_status": "Score-ready for pilot",
+      "data_quality_status": "PARTIAL_NOT_PUBLIC",
+      "publish_default": false,
+      "warnings": [
+        "Hidden by default: not public score-ready yet.",
+        "Data quality status: PARTIAL_NOT_PUBLIC.",
+        "Needs verified cutoff row and/or missing placement denominator/median/fee fields before public scoring."
+      ],
+      "source_count": 1
+    },
+    {
+      "program_key": "PROG-V5-001",
+      "college": "COEP Technological University, Pune",
+      "program": "Computer Engineering / Computer Science Engg.",
+      "route": "MHT-CET CAP + AI/JEE seats",
+      "admission_bucket": "UNLIKELY",
+      "closing_rank_or_merit": 117,
+      "closing_score": 99.612571,
+      "job_strength_score": 79.6,
+      "placement_confidence": 82.0,
+      "placement_status": "Partial score-ready",
+      "data_quality_status": "PARTIAL_NOT_PUBLIC",
+      "publish_default": false,
+      "warnings": [
+        "Hidden by default: not public score-ready yet.",
+        "Data quality status: PARTIAL_NOT_PUBLIC.",
+        "Needs verified cutoff row and/or missing placement denominator/median/fee fields before public scoring."
+      ],
+      "source_count": 3
+    },
+    {
+      "program_key": "PROG-V5-002",
+      "college": "VJTI Mumbai",
+      "program": "B.Tech Computer Engineering",
+      "route": "MHT-CET CAP + AI/JEE seats",
+      "admission_bucket": "UNLIKELY",
+      "closing_rank_or_merit": 112,
+      "closing_score": 99.961,
+      "job_strength_score": 74.2,
+      "placement_confidence": 78.0,
+      "placement_status": "Partial score-ready",
+      "data_quality_status": "PARTIAL_NOT_PUBLIC",
+      "publish_default": false,
+      "warnings": [
+        "Hidden by default: not public score-ready yet.",
+        "Data quality status: PARTIAL_NOT_PUBLIC.",
+        "Needs verified cutoff row and/or missing placement denominator/median/fee fields before public scoring."
+      ],
+      "source_count": 1
+    },
+    {
+      "program_key": "PROG-V5-008",
+      "college": "D. J. Sanghvi College of Engineering, Mumbai",
+      "program": "CSE - Data Science",
+      "route": "MHT-CET CAP + ILS",
+      "admission_bucket": "NEEDS_VERIFIED_CUTOFF",
+      "closing_rank_or_merit": null,
+      "closing_score": null,
+      "job_strength_score": 73.3,
+      "placement_confidence": 86.0,
+      "placement_status": "Score-ready for pilot with warning",
+      "data_quality_status": "PARTIAL_NOT_PUBLIC",
+      "publish_default": false,
+      "warnings": [
+        "Hidden by default: not public score-ready yet.",
+        "Data quality status: PARTIAL_NOT_PUBLIC.",
+        "Needs verified cutoff row and/or missing placement denominator/median/fee fields before public scoring."
+      ],
+      "source_count": 2
+    },
+    {
+      "program_key": "PROG-V5-013",
+      "college": "IIIT Nagpur",
+      "program": "B.Tech CSE / overall",
+      "route": "JoSAA/CSAB",
+      "admission_bucket": "NEEDS_VERIFIED_CUTOFF",
+      "closing_rank_or_merit": null,
+      "closing_score": null,
+      "job_strength_score": 72.4,
+      "placement_confidence": 76.0,
+      "placement_status": "Partial score-ready",
+      "data_quality_status": "PARTIAL_NOT_PUBLIC",
+      "publish_default": false,
+      "warnings": [
+        "This row is JoSAA/JEE oriented. Do not compare it directly with MHT-CET merit rank.",
+        "Hidden by default: not public score-ready yet.",
+        "Data quality status: PARTIAL_NOT_PUBLIC.",
+        "Needs verified cutoff row and/or missing placement denominator/median/fee fields before public scoring."
+      ],
+      "source_count": 2
+    },
+    {
+      "program_key": "PROG-V5-007",
+      "college": "D. J. Sanghvi College of Engineering, Mumbai",
+      "program": "Information Technology",
+      "route": "MHT-CET CAP + ILS",
+      "admission_bucket": "SAFE_HISTORICAL",
+      "closing_rank_or_merit": 2436,
+      "closing_score": 99.2447552,
+      "job_strength_score": 72.1,
+      "placement_confidence": 88.0,
+      "placement_status": "Score-ready for pilot with warning",
+      "data_quality_status": "PARTIAL_NOT_PUBLIC",
+      "publish_default": false,
+      "warnings": [
+        "Hidden by default: not public score-ready yet.",
+        "Data quality status: PARTIAL_NOT_PUBLIC.",
+        "Needs verified cutoff row and/or missing placement denominator/median/fee fields before public scoring."
+      ],
+      "source_count": 2
+    },
+    {
+      "program_key": "PROG-V5-006",
+      "college": "D. J. Sanghvi College of Engineering, Mumbai",
+      "program": "Computer Engineering",
+      "route": "MHT-CET CAP + ILS",
+      "admission_bucket": "SAFE_HISTORICAL",
+      "closing_rank_or_merit": 1605,
+      "closing_score": 99.4760923,
+      "job_strength_score": 66.1,
+      "placement_confidence": 88.0,
+      "placement_status": "Score-ready for pilot with warning",
+      "data_quality_status": "PARTIAL_NOT_PUBLIC",
+      "publish_default": false,
+      "warnings": [
+        "Hidden by default: not public score-ready yet.",
+        "Data quality status: PARTIAL_NOT_PUBLIC.",
+        "Needs verified cutoff row and/or missing placement denominator/median/fee fields before public scoring."
+      ],
+      "source_count": 3
+    },
+    {
+      "program_key": "PROG-V5-009",
+      "college": "Walchand College of Engineering, Sangli",
+      "program": "Computer Science and Engineering",
+      "route": "MHT-CET CAP",
+      "admission_bucket": "NEEDS_VERIFIED_CUTOFF",
+      "closing_rank_or_merit": null,
+      "closing_score": null,
+      "job_strength_score": 62.4,
+      "placement_confidence": 78.0,
+      "placement_status": "Partial score-ready",
+      "data_quality_status": "PARTIAL_NOT_PUBLIC",
+      "publish_default": false,
+      "warnings": [
+        "Hidden by default: not public score-ready yet.",
+        "Data quality status: PARTIAL_NOT_PUBLIC.",
+        "Needs verified cutoff row and/or missing placement denominator/median/fee fields before public scoring."
+      ],
+      "source_count": 2
+    },
+    {
+      "program_key": "PROG-V5-010",
+      "college": "PCCOE Pune",
+      "program": "Computer Engineering",
+      "route": "MHT-CET CAP",
+      "admission_bucket": "NEEDS_VERIFIED_CUTOFF",
+      "closing_rank_or_merit": null,
+      "closing_score": null,
+      "job_strength_score": 55.0,
+      "placement_confidence": 74.0,
+      "placement_status": "Partial score-ready",
+      "data_quality_status": "PARTIAL_NOT_PUBLIC",
+      "publish_default": false,
+      "warnings": [
+        "Hidden by default: not public score-ready yet.",
+        "Data quality status: PARTIAL_NOT_PUBLIC.",
+        "Needs verified cutoff row and/or missing placement denominator/median/fee fields before public scoring."
+      ],
+      "source_count": 2
+    },
+    {
+      "program_key": "PROG-V5-012",
+      "college": "VIT Pune",
+      "program": "AI & DS",
+      "route": "MHT-CET CAP",
+      "admission_bucket": "NEEDS_VERIFIED_CUTOFF",
+      "closing_rank_or_merit": null,
+      "closing_score": null,
+      "job_strength_score": 51.0,
+      "placement_confidence": 68.0,
+      "placement_status": "Partial/provisional",
+      "data_quality_status": "PARTIAL_NOT_PUBLIC",
+      "publish_default": false,
+      "warnings": [
+        "Hidden by default: not public score-ready yet.",
+        "Data quality status: PARTIAL_NOT_PUBLIC.",
+        "Needs verified cutoff row and/or missing placement denominator/median/fee fields before public scoring."
+      ],
+      "source_count": 1
+    },
+    {
+      "program_key": "PROG-V5-011",
+      "college": "VIT Pune",
+      "program": "Computer Engineering",
+      "route": "MHT-CET CAP",
+      "admission_bucket": "NEEDS_VERIFIED_CUTOFF",
+      "closing_rank_or_merit": null,
+      "closing_score": null,
+      "job_strength_score": 50.8,
+      "placement_confidence": 70.0,
+      "placement_status": "Partial/provisional",
+      "data_quality_status": "PARTIAL_NOT_PUBLIC",
+      "publish_default": false,
+      "warnings": [
+        "Hidden by default: not public score-ready yet.",
+        "Data quality status: PARTIAL_NOT_PUBLIC.",
+        "Needs verified cutoff row and/or missing placement denominator/median/fee fields before public scoring."
+      ],
+      "source_count": 2
+    },
+    {
+      "program_key": "PROG-V5-014",
+      "college": "IIIT Pune",
+      "program": "B.Tech CSE",
+      "route": "JoSAA/CSAB",
+      "admission_bucket": "NEEDS_VERIFIED_CUTOFF",
+      "closing_rank_or_merit": null,
+      "closing_score": null,
+      "job_strength_score": 45.4,
+      "placement_confidence": 55.0,
+      "placement_status": "Provisional only",
+      "data_quality_status": "PARTIAL_NOT_PUBLIC",
+      "publish_default": false,
+      "warnings": [
+        "This row is JoSAA/JEE oriented. Do not compare it directly with MHT-CET merit rank.",
+        "Hidden by default: not public score-ready yet.",
+        "Data quality status: PARTIAL_NOT_PUBLIC.",
+        "Needs verified cutoff row and/or missing placement denominator/median/fee fields before public scoring."
+      ],
+      "source_count": 2
+    },
+    {
+      "program_key": "PROG-V5-015",
+      "college": "PICT Pune",
+      "program": "Computer/IT/AI-DS",
+      "route": "MHT-CET CAP",
+      "admission_bucket": "NEEDS_VERIFIED_CUTOFF",
+      "closing_rank_or_merit": null,
+      "closing_score": null,
+      "job_strength_score": 40.0,
+      "placement_confidence": 40.0,
+      "placement_status": "Not score-ready",
+      "data_quality_status": "PARTIAL_NOT_PUBLIC",
+      "publish_default": false,
+      "warnings": [
+        "Hidden by default: not public score-ready yet.",
+        "Data quality status: PARTIAL_NOT_PUBLIC.",
+        "Needs verified cutoff row and/or missing placement denominator/median/fee fields before public scoring."
+      ],
+      "source_count": 2
+    }
+  ],
+  "counts": {
+    "total_loaded": 15,
+    "visible_returned": 15,
+    "default_publishable_total": 1,
+    "hidden_pending_verification": 14
+  }
+}

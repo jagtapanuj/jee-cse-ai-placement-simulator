@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maharashtra CSE/AI Job & Placement Simulator - Local Pilot</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">Local pilot • Maharashtra-only • source-gated</p>
+      <h1>JEE/CAP CSE-AI Job & Placement Simulator</h1>
+      <p class="sub">This local pilot shows only data that passes the current safety gate by default. Partial rows remain hidden unless internal testing mode is enabled.</p>
+      <div class="warning">Not a guarantee of admission, job, branch, or package. Use only as historical evidence support.</div>
+    </section>
+
+    <section class="card form-card">
+      <label>
+        Rank / merit number
+        <input id="rank" type="number" placeholder="Example: 300" value="300" />
+      </label>
+      <label>
+        Rank type
+        <select id="rankType">
+          <option value="UNKNOWN">Unknown / test only</option>
+          <option value="MHT_CET_MERIT">MHT-CET merit</option>
+          <option value="JEE_MAIN_CRL">JEE Main CRL</option>
+          <option value="JEE_MAIN_CATEGORY">JEE Main category rank</option>
+        </select>
+      </label>
+      <label class="check"><input id="includePartial" type="checkbox" /> Internal testing: include partial/staged rows</label>
+      <button id="runBtn">Run local simulation</button>
+    </section>
+
+    <section id="summary" class="summary"></section>
+    <section id="results" class="results"></section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
