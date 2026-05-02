@@ -9,11 +9,11 @@ except Exception as exc:  # pragma: no cover - useful message when dependency ab
     raise RuntimeError("FastAPI dependencies are not installed. Run: pip install -r requirements.txt") from exc
 
 from .simulator_core import compare as compare_programs
-from .simulator_core import list_programs, simulate, source_drawer
+from .simulator_core import data_quality_summary, list_programs, simulate, source_drawer
 
 app = FastAPI(
     title="Maharashtra JEE/CAP CSE-AI Job & Placement Simulator API",
-    version="0.7.0",
+    version="0.8.0",
     description="Pilot API with strict publish_default safety gate. Not a public final college database.",
 )
 
@@ -33,7 +33,12 @@ class CompareRequest(BaseModel):
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "data_version": "maharashtra-v6-localapp-v7"}
+    return {"status": "ok", "data_version": "maharashtra-v6-localapp-v8-patch"}
+
+
+@app.get("/data-quality")
+def data_quality():
+    return data_quality_summary()
 
 
 @app.get("/programs")
