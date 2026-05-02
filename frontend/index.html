@@ -33,8 +33,16 @@
       <button id="runBtn">Run local simulation</button>
     </section>
 
+    <section id="dataQuality" class="summary"></section>
     <section id="summary" class="summary"></section>
     <section id="results" class="results"></section>
+
+    <aside id="drawer" class="drawer hidden" aria-live="polite">
+      <div class="drawer-panel">
+        <button id="closeDrawer" class="secondary">Close</button>
+        <div id="drawerContent"></div>
+      </div>
+    </aside>
   </main>
   <script src="app.js"></script>
 </body>
