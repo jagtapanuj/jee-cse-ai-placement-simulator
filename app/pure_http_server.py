@@ -72,6 +72,18 @@ class Handler(BaseHTTPRequestHandler):
                     max_results=int(params.get("max_results", ["25"])[0]),
                 ))
 
+            if path == "/api/compare":
+                raw_values = params.get("program_keys", []) + params.get("program_key", [])
+                program_keys = []
+                for raw in raw_values:
+                    program_keys.extend(k.strip() for k in raw.split(",") if k.strip())
+                return self._send_json({
+                    "programs": compare(
+                        program_keys,
+                        include_partial=_bool(params.get("include_partial", [""])[0]),
+                    )
+                })
+
             if path.startswith("/api/sources/"):
                 return self._send_json(source_drawer(path.rsplit("/", 1)[-1]))
 
