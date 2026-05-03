@@ -22,7 +22,7 @@ The current app is a Maharashtra-only local pilot. It is not ready for public la
 | BLK-002 | P0 | Data model | Current CSV model is useful for pilot but does not yet implement full value-level provenance for every visible number. | Open | Design proper source/value/staging schema before public launch. |
 | BLK-003 | P0 | Admin workflow | Review checklist saves only in browser localStorage. It does not update dataset, GitHub, database, or audit logs. | Open | Treat review page as temporary helper only. Build real verification workflow later. |
 | BLK-004 | P0 | Public launch | Product is not public-ready. | Open | Do not launch until source-linked values, validation gates, admin workflow, and stronger QA pass. |
-| BLK-005 | P1 | README/docs | README/run instructions may still mention an old nested folder path such as `Maharashtra_Simulator_LocalApp_v7`. | Open | Inspect README and update run instructions if needed. |
+| BLK-005 | P1 | README/docs | README/run instructions mentioned an old nested folder path such as `Maharashtra_Simulator_LocalApp_v7`. | Resolved | README quick-start now points to the repository root. |
 | BLK-006 | P1 | API consistency | `pure_http_server.py` may not expose `/api/compare`, even though compare logic exists in core/FastAPI path. | Open | Inspect server routes and either add `/api/compare` or document limitation. |
 | BLK-007 | P1 | Version naming | API reports `maharashtra-v6-localapp-v8-patch`, while repo has later Patch v10/v11/manual fixes. | Open | Standardize data/app version naming after stabilization. |
 | BLK-008 | P1 | Source drawer | Source drawer API passed, but visual drawer interaction should still be manually checked in browser. | Open | Click “Open readable source drawer” and verify UI behavior. |
@@ -41,6 +41,7 @@ The current app is a Maharashtra-only local pilot. It is not ready for public la
 | RES-002 | Static frontend QA | Added `tests/test_static_frontend.py` to catch repeated HTML shell/corruption problems. |
 | RES-003 | CI testing | Added `.github/workflows/tests.yml` to run unit tests on GitHub push/pull request. |
 | RES-004 | Local verification | Home, queue, review pages and main API endpoints returned `200 OK` in manual local test. |
+| RES-005 | README/docs | README quick-start was corrected to run from the repository root instead of the old nested folder path. |
 
 ## Safety rules
 
