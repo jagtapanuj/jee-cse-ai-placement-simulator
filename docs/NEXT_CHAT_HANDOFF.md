@@ -18,9 +18,9 @@ If the working tree is not clean, stop and inspect before editing.
 
 ## Current known good state
 
-Latest known good commit: a6962df Add Maharashtra v1 readiness gate
+Latest known good commit: 942cc31 Add publication review endpoint
 Expected state: branch main is up to date with origin/main and working tree clean.
-Expected tests: 21 tests pass.
+Expected tests: 29 tests pass.
 
 ## Completed in this stabilization session
 
@@ -42,6 +42,10 @@ Expected tests: 21 tests pass.
 16. Removed beta wording from active docs.
 17. Added `/api/readiness` launch gate for Maharashtra v1.0 readiness.
 18. Added readiness tests in `tests/test_readiness.py`.
+19. Added global v1.0 publication checks in `data/publication_checks.csv`.
+20. Added per-program publication review rows in `data/program_publication_reviews.csv`.
+21. Added `/api/publication-review/{program_key}` endpoint.
+22. Added endpoint tests in `tests/test_publication_review_endpoint.py`.
 
 ## Current app state
 
@@ -58,7 +62,7 @@ The server terminal staying busy is normal. Stop it with Ctrl+C.
 ## Remaining important blockers
 
 Open blockers are tracked in docs/ISSUES_AND_BLOCKERS.md.
-Most important next blockers: BLK-001 to BLK-004. `/api/readiness` now exposes the Maharashtra v1.0 launch blockers. Next work should reduce those blockers through source-gated data, provenance, admin workflow, and scoring hardening.
+Most important next blockers: BLK-001 to BLK-004. `/api/readiness` now exposes the Maharashtra v1.0 launch blockers. Next work should reduce those blockers through row-level verification, admin review workflow, source/value provenance, and scoring hardening.
 
 ## Recommended next controlled part
 
