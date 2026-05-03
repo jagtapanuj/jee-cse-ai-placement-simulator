@@ -1,0 +1,9 @@
+check_key,check_name,required_for_v1,description
+source_urls_present,Source URLs present,yes,Every public row must have at least one traceable source URL.
+cutoff_verified,Admission cutoff verified,yes,Admission cutoff/merit value must be tied to an official or manually verified source row.
+placement_denominator_verified,Placement denominator verified,yes,Placement evidence must identify denominator basis or carry a visible warning.
+fee_verified,Fee or ROI basis verified,yes,Fee/ROI scoring must be tied to a source or clearly marked fee-only provisional.
+salary_basis_verified,Salary basis verified,yes,Median/base/average/highest salary basis must be known or warning must be visible.
+confidence_threshold_met,Confidence threshold met,yes,Public rows must meet the minimum confidence threshold for v1.0.
+last_verified_present,Last verified date present,yes,Every public row must have a last-verified date or audit row.
+manual_review_complete,Manual review complete,yes,Verifier must mark row ready before publish_default can be yes.

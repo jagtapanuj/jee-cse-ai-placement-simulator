@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Dict, List
 
-from .data_loader import load_programs, load_quality_audit, load_sources
+from .data_loader import load_programs, load_publication_checks, load_quality_audit, load_sources
 from .version import APP_VERSION, DATA_SCOPE, TARGET_PRODUCTION_VERSION
 
 
@@ -50,6 +50,7 @@ def readiness_report() -> Dict[str, Any]:
     programs = load_programs()
     sources = load_sources()
     audit_rows = load_quality_audit()
+    publication_checks = load_publication_checks()
 
     default_visible = [p for p in programs if p.publish_default]
     hidden = [p for p in programs if not p.publish_default]
@@ -104,12 +105,15 @@ def readiness_report() -> Dict[str, Any]:
             "hidden_pending_verification_rows": len(hidden),
             "source_register_rows": len(sources),
             "quality_audit_rows": len(audit_rows),
+            "publication_check_rows": len(publication_checks),
+            "required_publication_checks": len([c for c in publication_checks if str(c.get("required_for_v1", "")).lower() == "yes"]),
             "minimum_default_visible_rows_for_v1": MIN_DEFAULT_VISIBLE_ROWS_FOR_V1,
             "default_visible_rows_with_sources": len(public_rows_with_sources),
             "default_visible_verified_rows": len(public_rows_verified),
         },
         "launch_blockers": launch_blockers,
         "program_blockers": blockers,
+        "publication_checks": publication_checks,
         "rules": [
             "Maharashtra v1.0 scope only.",
             "No hidden row may be treated as public output.",

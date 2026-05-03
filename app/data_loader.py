@@ -38,3 +38,10 @@ def get_program(program_key: str) -> Program | None:
         if program.program_key == key:
             return program
     return None
+
+
+@lru_cache(maxsize=4)
+def load_publication_checks(path: str | None = None) -> List[Dict[str, str]]:
+    csv_path = Path(path) if path else DATA_DIR / "publication_checks.csv"
+    with csv_path.open("r", encoding="utf-8-sig", newline="") as f:
+        return [{k: clean_str(v) for k, v in row.items()} for row in csv.DictReader(f)]
