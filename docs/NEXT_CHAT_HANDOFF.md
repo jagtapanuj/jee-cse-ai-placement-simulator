@@ -18,9 +18,9 @@ If the working tree is not clean, stop and inspect before editing.
 
 ## Current known good state
 
-Latest known good commit: f16a024 Add pure HTTP compare endpoint
+Latest known good commit: a6962df Add Maharashtra v1 readiness gate
 Expected state: branch main is up to date with origin/main and working tree clean.
-Expected tests: 15 tests pass.
+Expected tests: 21 tests pass.
 
 ## Completed in this stabilization session
 
@@ -38,6 +38,10 @@ Expected tests: 15 tests pass.
 12. Added dependency-free `GET /api/compare` support in `app/pure_http_server.py`.
 13. Added pure HTTP endpoint tests in `tests/test_pure_http_server.py`.
 14. Marked BLK-006 resolved in `docs/ISSUES_AND_BLOCKERS.md`.
+15. Centralized industry-standard Maharashtra-only versioning in `app/version.py`.
+16. Removed beta wording from active docs.
+17. Added `/api/readiness` launch gate for Maharashtra v1.0 readiness.
+18. Added readiness tests in `tests/test_readiness.py`.
 
 ## Current app state
 
@@ -54,7 +58,7 @@ The server terminal staying busy is normal. Stop it with Ctrl+C.
 ## Remaining important blockers
 
 Open blockers are tracked in docs/ISSUES_AND_BLOCKERS.md.
-Most important next blockers: BLK-001 to BLK-004. The project is now moving from stabilization into Maharashtra v1.0 readiness: source-gated data, provenance, admin workflow, and public-readiness controls.
+Most important next blockers: BLK-001 to BLK-004. `/api/readiness` now exposes the Maharashtra v1.0 launch blockers. Next work should reduce those blockers through source-gated data, provenance, admin workflow, and scoring hardening.
 
 ## Recommended next controlled part
 
