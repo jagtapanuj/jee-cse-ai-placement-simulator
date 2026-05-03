@@ -7,6 +7,7 @@ from typing import Any, Dict, Iterable, List, Optional
 
 from .data_loader import get_program, load_programs, load_quality_audit, load_sources
 from .models import Program
+from .version import DATA_VERSION
 
 VALID_RANK_TYPES = {"MHT_CET_MERIT", "JEE_MAIN_CRL", "JEE_MAIN_CATEGORY", "UNKNOWN"}
 
@@ -93,7 +94,7 @@ def data_quality_summary() -> Dict[str, Any]:
         })
 
     return {
-        "data_version": "maharashtra-v6-localapp-v8-patch",
+        "data_version": DATA_VERSION,
         "summary": {
             "total_program_rows": len(programs),
             "default_visible_rows": len(default_rows),
@@ -203,7 +204,7 @@ def simulate(
         reverse=True,
     )
     return {
-        "data_version": "maharashtra-v6-localapp-v8-patch",
+        "data_version": DATA_VERSION,
         "input": {
             "rank": rank,
             "rank_type": rank_type,

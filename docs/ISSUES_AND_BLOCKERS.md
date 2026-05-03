@@ -24,7 +24,7 @@ The current app is a Maharashtra-only local pilot. It is not ready for public la
 | BLK-004 | P0 | Public launch | Product is not public-ready. | Open | Do not launch until source-linked values, validation gates, admin workflow, and stronger QA pass. |
 | BLK-005 | P1 | README/docs | README/run instructions mentioned an old nested folder path such as `Maharashtra_Simulator_LocalApp_v7`. | Resolved | README quick-start now points to the repository root. |
 | BLK-006 | P1 | API consistency | `pure_http_server.py` did not expose `/api/compare`, even though compare logic existed in core/FastAPI path. | Resolved | Added dependency-free `GET /api/compare` support with publish-default safety gate tests. |
-| BLK-007 | P1 | Version naming | API reports `maharashtra-v6-localapp-v8-patch`, while repo has later Patch v10/v11/manual fixes. | Open | Standardize data/app version naming after stabilization. |
+| BLK-007 | P1 | Version naming | API reported an old patch-era data version string in multiple places. | Resolved | Centralized app/data version naming in `app/version.py` and updated health/data payloads. |
 | BLK-008 | P1 | Source drawer | Source drawer API and visual drawer interaction were manually checked in browser. | Resolved | Source drawer opens, displays evidence/source/audit sections, and closes correctly in local pilot. |
 | BLK-009 | P1 | Scoring | Current job scores appear stored in CSV fields rather than computed fully from raw denominator-aware verified evidence. | Open | Build formula-backed scoring after schema/provenance work. |
 | BLK-010 | P1 | Admission engine | Current admission bucket logic is basic and not yet a full JoSAA/CSAB/CAP/JAC/private route engine. | Open | Expand route-specific engine only after stabilization. |
@@ -44,6 +44,7 @@ The current app is a Maharashtra-only local pilot. It is not ready for public la
 | RES-005 | README/docs | README quick-start was corrected to run from the repository root instead of the old nested folder path. |
 | RES-006 | Source drawer | Source drawer was visually verified in browser: opens, shows evidence/source/audit sections, and closes correctly. |
 | RES-007 | API consistency | Added `/api/compare` to the dependency-free pure HTTP server and covered it with endpoint tests. |
+| RES-008 | Version naming | Centralized app/data version naming with `app/version.py` and removed old patch-era API version strings. |
 
 ## Safety rules
 
@@ -59,5 +60,5 @@ The current app is a Maharashtra-only local pilot. It is not ready for public la
 1. Visually test the source drawer button.
 2. Inspect and fix README run instructions if outdated.
 3. Inspect `/api/compare` support in the dependency-free server.
-4. Standardize version naming.
+4. Push toward Maharashtra beta readiness: source-gated data, schema/provenance, admin workflow, and scoring hardening.
 5. Plan the next real architecture step: proper schema/provenance/admin workflow.

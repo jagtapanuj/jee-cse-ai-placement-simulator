@@ -6,6 +6,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 from .simulator_core import compare, data_quality_summary, list_programs, simulate, source_drawer
+from .version import version_payload
 
 ROOT = Path(__file__).resolve().parents[1]
 FRONTEND_DIR = ROOT / "frontend"
@@ -48,10 +49,7 @@ class Handler(BaseHTTPRequestHandler):
 
         try:
             if path == "/api/health":
-                return self._send_json({
-                    "status": "ok",
-                    "data_version": "maharashtra-v6-localapp-v8-patch",
-                })
+                return self._send_json(version_payload())
 
             if path == "/api/data-quality":
                 return self._send_json(data_quality_summary())

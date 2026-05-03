@@ -54,13 +54,13 @@ The server terminal staying busy is normal. Stop it with Ctrl+C.
 ## Remaining important blockers
 
 Open blockers are tracked in docs/ISSUES_AND_BLOCKERS.md.
-Most important next blocker: BLK-007. API/data version naming still reports `maharashtra-v6-localapp-v8-patch`, while repo history has later stabilization patches.
+Most important next blockers: BLK-001 to BLK-004. The project is now moving from stabilization into Maharashtra-only beta readiness: source-gated data, provenance, admin workflow, and public-readiness controls.
 
 ## Recommended next controlled part
 
-Part 7: inspect and standardize version naming after stabilization.
+Part 8: push toward Maharashtra-only beta readiness with strict source gates and no public overclaiming.
 Do not start by editing. First inspect files, confirm clean repo, run tests, then decide.
 
 ## Recommended next chat opening prompt
 
-Continue the JEE/CAP CSE-AI Job & Placement Simulator from docs/NEXT_CHAT_HANDOFF.md. First help me run startup verification commands. Do not change files until repo is clean and tests pass. Next likely task is BLK-007: standardize data/app version naming after inspecting current version strings and docs.
+Continue the JEE/CAP CSE-AI Job & Placement Simulator from docs/NEXT_CHAT_HANDOFF.md. First help me run startup verification commands. Do not change files until repo is clean and tests pass. Next likely task is Maharashtra beta readiness: inspect BLK-001 to BLK-004 and choose the smallest safe implementation step for source-gated data/provenance/admin workflow.

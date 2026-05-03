@@ -10,6 +10,7 @@ except Exception as exc:  # pragma: no cover - useful message when dependency ab
 
 from .simulator_core import compare as compare_programs
 from .simulator_core import data_quality_summary, list_programs, simulate, source_drawer
+from .version import version_payload
 
 app = FastAPI(
     title="Maharashtra JEE/CAP CSE-AI Job & Placement Simulator API",
@@ -33,7 +34,7 @@ class CompareRequest(BaseModel):
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "data_version": "maharashtra-v6-localapp-v8-patch"}
+    return version_payload()
 
 
 @app.get("/data-quality")
