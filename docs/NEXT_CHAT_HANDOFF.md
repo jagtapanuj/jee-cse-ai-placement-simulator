@@ -18,7 +18,7 @@ If the working tree is not clean, stop and inspect before editing.
 
 ## Current known good state
 
-Latest known good commit: 82e294e Docs: mark source drawer verification resolved
+Latest known good commit: 3472b50 Docs: add next chat handoff
 Expected state: branch main is up to date with origin/main and working tree clean.
 Expected tests: 13 tests pass.
 
