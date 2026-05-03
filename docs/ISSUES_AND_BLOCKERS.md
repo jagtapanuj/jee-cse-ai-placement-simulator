@@ -11,7 +11,7 @@ The current app is a Maharashtra-only local pilot. It is not ready for public la
 | Severity | Meaning |
 |---|---|
 | P0 | Blocks trust, safety, testing, or public readiness. |
-| P1 | Important before internal beta or next serious build stage. |
+| P1 | Important before internal review or next serious build stage. |
 | P2 | Cleanup, polish, or later hardening. |
 
 ## Current open issues and blockers

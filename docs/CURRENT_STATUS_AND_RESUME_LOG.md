@@ -88,7 +88,7 @@ Important rule: hidden rows must not be promoted to default/public visibility un
 6. Current scoring appears stored in CSV fields, not fully computed from verified denominator-aware raw data.
 7. Frontend static files do not yet have tests to catch corrupted HTML.
 8. The project has no complete production admin publish/rollback workflow yet.
-9. No public beta/launch should happen in the current state.
+9. No public launch should happen in the current state.
 
 ## What is safe to do next
 
