@@ -18,9 +18,9 @@ If the working tree is not clean, stop and inspect before editing.
 
 ## Current known good state
 
-Latest known good commit: 3472b50 Docs: add next chat handoff
+Latest known good commit: f16a024 Add pure HTTP compare endpoint
 Expected state: branch main is up to date with origin/main and working tree clean.
-Expected tests: 13 tests pass.
+Expected tests: 15 tests pass.
 
 ## Completed in this stabilization session
 
@@ -35,6 +35,9 @@ Expected tests: 13 tests pass.
 9. Added docs/ISSUES_AND_BLOCKERS.md.
 10. Fixed README quick-start path.
 11. Marked README and source drawer blockers resolved.
+12. Added dependency-free `GET /api/compare` support in `app/pure_http_server.py`.
+13. Added pure HTTP endpoint tests in `tests/test_pure_http_server.py`.
+14. Marked BLK-006 resolved in `docs/ISSUES_AND_BLOCKERS.md`.
 
 ## Current app state
 
@@ -51,14 +54,13 @@ The server terminal staying busy is normal. Stop it with Ctrl+C.
 ## Remaining important blockers
 
 Open blockers are tracked in docs/ISSUES_AND_BLOCKERS.md.
-Most important next blocker: BLK-006. app/pure_http_server.py imports compare, but does not expose /api/compare.
-FastAPI has POST /compare in app/api_app.py, and compare() exists in app/simulator_core.py.
+Most important next blocker: BLK-007. API/data version naming still reports `maharashtra-v6-localapp-v8-patch`, while repo history has later stabilization patches.
 
 ## Recommended next controlled part
 
-Part 6: inspect and add or document /api/compare support in app/pure_http_server.py.
+Part 7: inspect and standardize version naming after stabilization.
 Do not start by editing. First inspect files, confirm clean repo, run tests, then decide.
 
 ## Recommended next chat opening prompt
 
-Continue the JEE/CAP CSE-AI Job & Placement Simulator from docs/NEXT_CHAT_HANDOFF.md. First help me run startup verification commands. Do not change files until repo is clean and tests pass. Next likely task is BLK-006: inspect/add /api/compare support in app/pure_http_server.py, with tests, then update docs/ISSUES_AND_BLOCKERS.md.
+Continue the JEE/CAP CSE-AI Job & Placement Simulator from docs/NEXT_CHAT_HANDOFF.md. First help me run startup verification commands. Do not change files until repo is clean and tests pass. Next likely task is BLK-007: standardize data/app version naming after inspecting current version strings and docs.
