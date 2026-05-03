@@ -21,7 +21,7 @@ The current app is a Maharashtra-only local pilot. It is not ready for public la
 | BLK-001 | P0 | Data safety | 14 out of 15 program rows are hidden pending verification. | Open | Keep hidden rows as `publish_default=no` until source, cutoff, denominator, fee, confidence, and last-verified checks pass. |
 | BLK-002 | P0 | Data model | Current CSV model is useful for pilot but does not yet implement full value-level provenance for every visible number. | Open | Design proper source/value/staging schema before public launch. |
 | BLK-003 | P0 | Admin workflow | Review checklist saves only in browser localStorage. It does not update dataset, GitHub, database, or audit logs. | Open | Treat review page as temporary helper only. Build real verification workflow later. |
-| BLK-004 | P0 | Public launch | Product is not public-ready. | Open | Do not launch until source-linked values, validation gates, admin workflow, and stronger QA pass. |
+| BLK-004 | P0 | Public launch | Product is not public-ready. | Open | Use `/api/readiness` as the v1.0 launch gate. Do not launch until source-linked values, validation gates, admin workflow, and stronger QA pass. |
 | BLK-005 | P1 | README/docs | README/run instructions mentioned an old nested folder path such as `Maharashtra_Simulator_LocalApp_v7`. | Resolved | README quick-start now points to the repository root. |
 | BLK-006 | P1 | API consistency | `pure_http_server.py` did not expose `/api/compare`, even though compare logic existed in core/FastAPI path. | Resolved | Added dependency-free `GET /api/compare` support with publish-default safety gate tests. |
 | BLK-007 | P1 | Version naming | API reported an old patch-era data version string in multiple places. | Resolved | Centralized app/data version naming in `app/version.py` and updated health/data payloads. |
@@ -45,6 +45,7 @@ The current app is a Maharashtra-only local pilot. It is not ready for public la
 | RES-006 | Source drawer | Source drawer was visually verified in browser: opens, shows evidence/source/audit sections, and closes correctly. |
 | RES-007 | API consistency | Added `/api/compare` to the dependency-free pure HTTP server and covered it with endpoint tests. |
 | RES-008 | Version naming | Centralized app/data version naming with `app/version.py` and removed old patch-era API version strings. |
+| RES-009 | Launch readiness | Added `/api/readiness` and readiness tests to make Maharashtra v1.0 launch blockers explicit. |
 
 ## Safety rules
 

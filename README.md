@@ -39,6 +39,7 @@ API examples:
 ```text
 http://127.0.0.1:8000/api/health
 http://127.0.0.1:8000/api/programs
+http://127.0.0.1:8000/api/readiness
 http://127.0.0.1:8000/api/simulate?rank=300&rank_type=MHT_CET_MERIT
 http://127.0.0.1:8000/api/simulate?rank=300&rank_type=MHT_CET_MERIT&include_partial=true
 ```

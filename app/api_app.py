@@ -8,6 +8,7 @@ try:
 except Exception as exc:  # pragma: no cover - useful message when dependency absent
     raise RuntimeError("FastAPI dependencies are not installed. Run: pip install -r requirements.txt") from exc
 
+from .readiness import readiness_report
 from .simulator_core import compare as compare_programs
 from .simulator_core import data_quality_summary, list_programs, simulate, source_drawer
 from .version import version_payload
@@ -40,6 +41,11 @@ def health():
 @app.get("/data-quality")
 def data_quality():
     return data_quality_summary()
+
+
+@app.get("/readiness")
+def readiness():
+    return readiness_report()
 
 
 @app.get("/programs")

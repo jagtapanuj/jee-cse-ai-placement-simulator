@@ -5,6 +5,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
+from .readiness import readiness_report
 from .simulator_core import compare, data_quality_summary, list_programs, simulate, source_drawer
 from .version import version_payload
 
@@ -53,6 +54,9 @@ class Handler(BaseHTTPRequestHandler):
 
             if path == "/api/data-quality":
                 return self._send_json(data_quality_summary())
+
+            if path == "/api/readiness":
+                return self._send_json(readiness_report())
 
             if path == "/api/programs":
                 return self._send_json({
