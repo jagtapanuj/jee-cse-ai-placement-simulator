@@ -1,0 +1,121 @@
+program_key,check_key,status,review_source,reviewed_by,reviewed_at,notes
+PROG-V5-001,source_urls_present,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-001,cutoff_verified,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-001,placement_denominator_verified,pending,auto_seeded_from_current_csv,,,Needs denominator basis such as total/eligible/opted/placed or visible warning.
+PROG-V5-001,fee_verified,pending,auto_seeded_from_current_csv,,,Needs fee or ROI basis tied to source before public publication.
+PROG-V5-001,salary_basis_verified,pending,auto_seeded_from_current_csv,,,Needs salary basis such as median/base/average/highest and CTC warning where relevant.
+PROG-V5-001,confidence_threshold_met,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-001,last_verified_present,pending,auto_seeded_from_current_csv,,,Needs last-verified date or audit entry before public publication.
+PROG-V5-001,manual_review_complete,pending,auto_seeded_from_current_csv,,,Needs final verifier approval before publish_default can be yes.
+PROG-V5-002,source_urls_present,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-002,cutoff_verified,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-002,placement_denominator_verified,pending,auto_seeded_from_current_csv,,,Needs denominator basis such as total/eligible/opted/placed or visible warning.
+PROG-V5-002,fee_verified,pending,auto_seeded_from_current_csv,,,Needs fee or ROI basis tied to source before public publication.
+PROG-V5-002,salary_basis_verified,pending,auto_seeded_from_current_csv,,,Needs salary basis such as median/base/average/highest and CTC warning where relevant.
+PROG-V5-002,confidence_threshold_met,pending,auto_seeded_from_current_csv,,,Needs minimum confidence threshold and score evidence before public publication.
+PROG-V5-002,last_verified_present,pending,auto_seeded_from_current_csv,,,Needs last-verified date or audit entry before public publication.
+PROG-V5-002,manual_review_complete,pending,auto_seeded_from_current_csv,,,Needs final verifier approval before publish_default can be yes.
+PROG-V5-003,source_urls_present,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-003,cutoff_verified,pending,auto_seeded_from_current_csv,,,Needs verified official cutoff/merit row before public publication.
+PROG-V5-003,placement_denominator_verified,pending,auto_seeded_from_current_csv,,,Needs denominator basis such as total/eligible/opted/placed or visible warning.
+PROG-V5-003,fee_verified,pending,auto_seeded_from_current_csv,,,Needs fee or ROI basis tied to source before public publication.
+PROG-V5-003,salary_basis_verified,pending,auto_seeded_from_current_csv,,,Needs salary basis such as median/base/average/highest and CTC warning where relevant.
+PROG-V5-003,confidence_threshold_met,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-003,last_verified_present,pending,auto_seeded_from_current_csv,,,Needs last-verified date or audit entry before public publication.
+PROG-V5-003,manual_review_complete,pending,auto_seeded_from_current_csv,,,Needs final verifier approval before publish_default can be yes.
+PROG-V5-004,source_urls_present,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-004,cutoff_verified,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-004,placement_denominator_verified,pending,auto_seeded_from_current_csv,,,Needs denominator basis such as total/eligible/opted/placed or visible warning.
+PROG-V5-004,fee_verified,pending,auto_seeded_from_current_csv,,,Needs fee or ROI basis tied to source before public publication.
+PROG-V5-004,salary_basis_verified,pending,auto_seeded_from_current_csv,,,Needs salary basis such as median/base/average/highest and CTC warning where relevant.
+PROG-V5-004,confidence_threshold_met,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-004,last_verified_present,pending,auto_seeded_from_current_csv,,,Needs last-verified date or audit entry before public publication.
+PROG-V5-004,manual_review_complete,pending,auto_seeded_from_current_csv,,,Needs final verifier approval before publish_default can be yes.
+PROG-V5-005,source_urls_present,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-005,cutoff_verified,pending,auto_seeded_from_current_csv,,,Needs verified official cutoff/merit row before public publication.
+PROG-V5-005,placement_denominator_verified,pending,auto_seeded_from_current_csv,,,Needs denominator basis such as total/eligible/opted/placed or visible warning.
+PROG-V5-005,fee_verified,pending,auto_seeded_from_current_csv,,,Needs fee or ROI basis tied to source before public publication.
+PROG-V5-005,salary_basis_verified,pending,auto_seeded_from_current_csv,,,Needs salary basis such as median/base/average/highest and CTC warning where relevant.
+PROG-V5-005,confidence_threshold_met,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-005,last_verified_present,pending,auto_seeded_from_current_csv,,,Needs last-verified date or audit entry before public publication.
+PROG-V5-005,manual_review_complete,pending,auto_seeded_from_current_csv,,,Needs final verifier approval before publish_default can be yes.
+PROG-V5-006,source_urls_present,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-006,cutoff_verified,pending,auto_seeded_from_current_csv,,,Needs verified official cutoff/merit row before public publication.
+PROG-V5-006,placement_denominator_verified,pending,auto_seeded_from_current_csv,,,Needs denominator basis such as total/eligible/opted/placed or visible warning.
+PROG-V5-006,fee_verified,pending,auto_seeded_from_current_csv,,,Needs fee or ROI basis tied to source before public publication.
+PROG-V5-006,salary_basis_verified,pending,auto_seeded_from_current_csv,,,Needs salary basis such as median/base/average/highest and CTC warning where relevant.
+PROG-V5-006,confidence_threshold_met,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-006,last_verified_present,pending,auto_seeded_from_current_csv,,,Needs last-verified date or audit entry before public publication.
+PROG-V5-006,manual_review_complete,pending,auto_seeded_from_current_csv,,,Needs final verifier approval before publish_default can be yes.
+PROG-V5-007,source_urls_present,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-007,cutoff_verified,pending,auto_seeded_from_current_csv,,,Needs verified official cutoff/merit row before public publication.
+PROG-V5-007,placement_denominator_verified,pending,auto_seeded_from_current_csv,,,Needs denominator basis such as total/eligible/opted/placed or visible warning.
+PROG-V5-007,fee_verified,pending,auto_seeded_from_current_csv,,,Needs fee or ROI basis tied to source before public publication.
+PROG-V5-007,salary_basis_verified,pending,auto_seeded_from_current_csv,,,Needs salary basis such as median/base/average/highest and CTC warning where relevant.
+PROG-V5-007,confidence_threshold_met,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-007,last_verified_present,pending,auto_seeded_from_current_csv,,,Needs last-verified date or audit entry before public publication.
+PROG-V5-007,manual_review_complete,pending,auto_seeded_from_current_csv,,,Needs final verifier approval before publish_default can be yes.
+PROG-V5-008,source_urls_present,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-008,cutoff_verified,pending,auto_seeded_from_current_csv,,,Needs verified official cutoff/merit row before public publication.
+PROG-V5-008,placement_denominator_verified,pending,auto_seeded_from_current_csv,,,Needs denominator basis such as total/eligible/opted/placed or visible warning.
+PROG-V5-008,fee_verified,pending,auto_seeded_from_current_csv,,,Needs fee or ROI basis tied to source before public publication.
+PROG-V5-008,salary_basis_verified,pending,auto_seeded_from_current_csv,,,Needs salary basis such as median/base/average/highest and CTC warning where relevant.
+PROG-V5-008,confidence_threshold_met,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-008,last_verified_present,pending,auto_seeded_from_current_csv,,,Needs last-verified date or audit entry before public publication.
+PROG-V5-008,manual_review_complete,pending,auto_seeded_from_current_csv,,,Needs final verifier approval before publish_default can be yes.
+PROG-V5-009,source_urls_present,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-009,cutoff_verified,pending,auto_seeded_from_current_csv,,,Needs verified official cutoff/merit row before public publication.
+PROG-V5-009,placement_denominator_verified,pending,auto_seeded_from_current_csv,,,Needs denominator basis such as total/eligible/opted/placed or visible warning.
+PROG-V5-009,fee_verified,pending,auto_seeded_from_current_csv,,,Needs fee or ROI basis tied to source before public publication.
+PROG-V5-009,salary_basis_verified,pending,auto_seeded_from_current_csv,,,Needs salary basis such as median/base/average/highest and CTC warning where relevant.
+PROG-V5-009,confidence_threshold_met,pending,auto_seeded_from_current_csv,,,Needs minimum confidence threshold and score evidence before public publication.
+PROG-V5-009,last_verified_present,pending,auto_seeded_from_current_csv,,,Needs last-verified date or audit entry before public publication.
+PROG-V5-009,manual_review_complete,pending,auto_seeded_from_current_csv,,,Needs final verifier approval before publish_default can be yes.
+PROG-V5-010,source_urls_present,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-010,cutoff_verified,pending,auto_seeded_from_current_csv,,,Needs verified official cutoff/merit row before public publication.
+PROG-V5-010,placement_denominator_verified,pending,auto_seeded_from_current_csv,,,Needs denominator basis such as total/eligible/opted/placed or visible warning.
+PROG-V5-010,fee_verified,pending,auto_seeded_from_current_csv,,,Needs fee or ROI basis tied to source before public publication.
+PROG-V5-010,salary_basis_verified,pending,auto_seeded_from_current_csv,,,Needs salary basis such as median/base/average/highest and CTC warning where relevant.
+PROG-V5-010,confidence_threshold_met,pending,auto_seeded_from_current_csv,,,Needs minimum confidence threshold and score evidence before public publication.
+PROG-V5-010,last_verified_present,pending,auto_seeded_from_current_csv,,,Needs last-verified date or audit entry before public publication.
+PROG-V5-010,manual_review_complete,pending,auto_seeded_from_current_csv,,,Needs final verifier approval before publish_default can be yes.
+PROG-V5-011,source_urls_present,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-011,cutoff_verified,pending,auto_seeded_from_current_csv,,,Needs verified official cutoff/merit row before public publication.
+PROG-V5-011,placement_denominator_verified,pending,auto_seeded_from_current_csv,,,Needs denominator basis such as total/eligible/opted/placed or visible warning.
+PROG-V5-011,fee_verified,pending,auto_seeded_from_current_csv,,,Needs fee or ROI basis tied to source before public publication.
+PROG-V5-011,salary_basis_verified,pending,auto_seeded_from_current_csv,,,Needs salary basis such as median/base/average/highest and CTC warning where relevant.
+PROG-V5-011,confidence_threshold_met,pending,auto_seeded_from_current_csv,,,Needs minimum confidence threshold and score evidence before public publication.
+PROG-V5-011,last_verified_present,pending,auto_seeded_from_current_csv,,,Needs last-verified date or audit entry before public publication.
+PROG-V5-011,manual_review_complete,pending,auto_seeded_from_current_csv,,,Needs final verifier approval before publish_default can be yes.
+PROG-V5-012,source_urls_present,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-012,cutoff_verified,pending,auto_seeded_from_current_csv,,,Needs verified official cutoff/merit row before public publication.
+PROG-V5-012,placement_denominator_verified,pending,auto_seeded_from_current_csv,,,Needs denominator basis such as total/eligible/opted/placed or visible warning.
+PROG-V5-012,fee_verified,pending,auto_seeded_from_current_csv,,,Needs fee or ROI basis tied to source before public publication.
+PROG-V5-012,salary_basis_verified,pending,auto_seeded_from_current_csv,,,Needs salary basis such as median/base/average/highest and CTC warning where relevant.
+PROG-V5-012,confidence_threshold_met,pending,auto_seeded_from_current_csv,,,Needs minimum confidence threshold and score evidence before public publication.
+PROG-V5-012,last_verified_present,pending,auto_seeded_from_current_csv,,,Needs last-verified date or audit entry before public publication.
+PROG-V5-012,manual_review_complete,pending,auto_seeded_from_current_csv,,,Needs final verifier approval before publish_default can be yes.
+PROG-V5-013,source_urls_present,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-013,cutoff_verified,pending,auto_seeded_from_current_csv,,,Needs verified official cutoff/merit row before public publication.
+PROG-V5-013,placement_denominator_verified,pending,auto_seeded_from_current_csv,,,Needs denominator basis such as total/eligible/opted/placed or visible warning.
+PROG-V5-013,fee_verified,pending,auto_seeded_from_current_csv,,,Needs fee or ROI basis tied to source before public publication.
+PROG-V5-013,salary_basis_verified,pending,auto_seeded_from_current_csv,,,Needs salary basis such as median/base/average/highest and CTC warning where relevant.
+PROG-V5-013,confidence_threshold_met,pending,auto_seeded_from_current_csv,,,Needs minimum confidence threshold and score evidence before public publication.
+PROG-V5-013,last_verified_present,pending,auto_seeded_from_current_csv,,,Needs last-verified date or audit entry before public publication.
+PROG-V5-013,manual_review_complete,pending,auto_seeded_from_current_csv,,,Needs final verifier approval before publish_default can be yes.
+PROG-V5-014,source_urls_present,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-014,cutoff_verified,pending,auto_seeded_from_current_csv,,,Needs verified official cutoff/merit row before public publication.
+PROG-V5-014,placement_denominator_verified,pending,auto_seeded_from_current_csv,,,Needs denominator basis such as total/eligible/opted/placed or visible warning.
+PROG-V5-014,fee_verified,pending,auto_seeded_from_current_csv,,,Needs fee or ROI basis tied to source before public publication.
+PROG-V5-014,salary_basis_verified,pending,auto_seeded_from_current_csv,,,Needs salary basis such as median/base/average/highest and CTC warning where relevant.
+PROG-V5-014,confidence_threshold_met,pending,auto_seeded_from_current_csv,,,Needs minimum confidence threshold and score evidence before public publication.
+PROG-V5-014,last_verified_present,pending,auto_seeded_from_current_csv,,,Needs last-verified date or audit entry before public publication.
+PROG-V5-014,manual_review_complete,pending,auto_seeded_from_current_csv,,,Needs final verifier approval before publish_default can be yes.
+PROG-V5-015,source_urls_present,passed,auto_seeded_from_current_csv,,,Auto-derived from current structured data; still subject to final human review.
+PROG-V5-015,cutoff_verified,pending,auto_seeded_from_current_csv,,,Needs verified official cutoff/merit row before public publication.
+PROG-V5-015,placement_denominator_verified,pending,auto_seeded_from_current_csv,,,Needs denominator basis such as total/eligible/opted/placed or visible warning.
+PROG-V5-015,fee_verified,pending,auto_seeded_from_current_csv,,,Needs fee or ROI basis tied to source before public publication.
+PROG-V5-015,salary_basis_verified,pending,auto_seeded_from_current_csv,,,Needs salary basis such as median/base/average/highest and CTC warning where relevant.
+PROG-V5-015,confidence_threshold_met,pending,auto_seeded_from_current_csv,,,Needs minimum confidence threshold and score evidence before public publication.
+PROG-V5-015,last_verified_present,pending,auto_seeded_from_current_csv,,,Needs last-verified date or audit entry before public publication.
+PROG-V5-015,manual_review_complete,pending,auto_seeded_from_current_csv,,,Needs final verifier approval before publish_default can be yes.

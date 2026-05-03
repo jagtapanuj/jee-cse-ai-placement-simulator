@@ -45,3 +45,10 @@ def load_publication_checks(path: str | None = None) -> List[Dict[str, str]]:
     csv_path = Path(path) if path else DATA_DIR / "publication_checks.csv"
     with csv_path.open("r", encoding="utf-8-sig", newline="") as f:
         return [{k: clean_str(v) for k, v in row.items()} for row in csv.DictReader(f)]
+
+
+@lru_cache(maxsize=4)
+def load_program_publication_reviews(path: str | None = None) -> List[Dict[str, str]]:
+    csv_path = Path(path) if path else DATA_DIR / "program_publication_reviews.csv"
+    with csv_path.open("r", encoding="utf-8-sig", newline="") as f:
+        return [{k: clean_str(v) for k, v in row.items()} for row in csv.DictReader(f)]
