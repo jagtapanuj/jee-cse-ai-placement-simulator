@@ -25,7 +25,7 @@ The current app is a Maharashtra-only local pilot. It is not ready for public la
 | BLK-005 | P1 | README/docs | README/run instructions mentioned an old nested folder path such as `Maharashtra_Simulator_LocalApp_v7`. | Resolved | README quick-start now points to the repository root. |
 | BLK-006 | P1 | API consistency | `pure_http_server.py` may not expose `/api/compare`, even though compare logic exists in core/FastAPI path. | Open | Inspect server routes and either add `/api/compare` or document limitation. |
 | BLK-007 | P1 | Version naming | API reports `maharashtra-v6-localapp-v8-patch`, while repo has later Patch v10/v11/manual fixes. | Open | Standardize data/app version naming after stabilization. |
-| BLK-008 | P1 | Source drawer | Source drawer API passed, but visual drawer interaction should still be manually checked in browser. | Open | Click “Open readable source drawer” and verify UI behavior. |
+| BLK-008 | P1 | Source drawer | Source drawer API and visual drawer interaction were manually checked in browser. | Resolved | Source drawer opens, displays evidence/source/audit sections, and closes correctly in local pilot. |
 | BLK-009 | P1 | Scoring | Current job scores appear stored in CSV fields rather than computed fully from raw denominator-aware verified evidence. | Open | Build formula-backed scoring after schema/provenance work. |
 | BLK-010 | P1 | Admission engine | Current admission bucket logic is basic and not yet a full JoSAA/CSAB/CAP/JAC/private route engine. | Open | Expand route-specific engine only after stabilization. |
 | BLK-011 | P1 | Placement evidence | Placement evidence is not yet full denominator-aware production model. | Open | Add total/eligible/opted/placed/higher-studies/off-campus fields in future schema. |
@@ -42,6 +42,7 @@ The current app is a Maharashtra-only local pilot. It is not ready for public la
 | RES-003 | CI testing | Added `.github/workflows/tests.yml` to run unit tests on GitHub push/pull request. |
 | RES-004 | Local verification | Home, queue, review pages and main API endpoints returned `200 OK` in manual local test. |
 | RES-005 | README/docs | README quick-start was corrected to run from the repository root instead of the old nested folder path. |
+| RES-006 | Source drawer | Source drawer was visually verified in browser: opens, shows evidence/source/audit sections, and closes correctly. |
 
 ## Safety rules
 
