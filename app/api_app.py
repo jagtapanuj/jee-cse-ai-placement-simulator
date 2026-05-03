@@ -8,6 +8,7 @@ try:
 except Exception as exc:  # pragma: no cover - useful message when dependency absent
     raise RuntimeError("FastAPI dependencies are not installed. Run: pip install -r requirements.txt") from exc
 
+from .publication_review import publication_review
 from .readiness import readiness_report
 from .simulator_core import compare as compare_programs
 from .simulator_core import data_quality_summary, list_programs, simulate, source_drawer
@@ -46,6 +47,14 @@ def data_quality():
 @app.get("/readiness")
 def readiness():
     return readiness_report()
+
+
+@app.get("/publication-review/{program_key}")
+def publication_review_endpoint(program_key: str):
+    try:
+        return publication_review(program_key)
+    except KeyError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
 
 
 @app.get("/programs")

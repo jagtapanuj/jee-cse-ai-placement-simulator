@@ -5,6 +5,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
+from .publication_review import publication_review
 from .readiness import readiness_report
 from .simulator_core import compare, data_quality_summary, list_programs, simulate, source_drawer
 from .version import version_payload
@@ -57,6 +58,9 @@ class Handler(BaseHTTPRequestHandler):
 
             if path == "/api/readiness":
                 return self._send_json(readiness_report())
+
+            if path.startswith("/api/publication-review/"):
+                return self._send_json(publication_review(path.rsplit("/", 1)[-1]))
 
             if path == "/api/programs":
                 return self._send_json({
