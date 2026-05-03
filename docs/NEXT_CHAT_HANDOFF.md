@@ -18,9 +18,9 @@ If the working tree is not clean, stop and inspect before editing.
 
 ## Current known good state
 
-Latest known good commit: 942cc31 Add publication review endpoint
+Latest known good commit: 94b11c6 Add publication review checklist UI
 Expected state: branch main is up to date with origin/main and working tree clean.
-Expected tests: 29 tests pass.
+Expected tests: 30 tests pass.
 
 ## Completed in this stabilization session
 
@@ -46,6 +46,10 @@ Expected tests: 29 tests pass.
 20. Added per-program publication review rows in `data/program_publication_reviews.csv`.
 21. Added `/api/publication-review/{program_key}` endpoint.
 22. Added endpoint tests in `tests/test_publication_review_endpoint.py`.
+23. Wired `frontend/review.html` and `frontend/review.js` to consume `/api/publication-review/{program_key}`.
+24. Added static frontend coverage that verifies the review page uses the publication-review API.
+25. Verified 30/30 tests pass after the review UI change.
+26. Committed and pushed `94b11c6 Add publication review checklist UI`.
 
 ## Current app state
 
@@ -62,7 +66,7 @@ The server terminal staying busy is normal. Stop it with Ctrl+C.
 ## Remaining important blockers
 
 Open blockers are tracked in docs/ISSUES_AND_BLOCKERS.md.
-Most important next blockers: BLK-001 to BLK-004. `/api/readiness` now exposes the Maharashtra v1.0 launch blockers. Next work should reduce those blockers through row-level verification, admin review workflow, source/value provenance, and scoring hardening.
+Most important next blockers: BLK-001 to BLK-004. `/api/readiness` now exposes the Maharashtra v1.0 launch blockers. Next work should reduce those blockers through row-level verification, stronger source/value provenance, readiness blockers, and scoring hardening. The review UI now shows publication checks but remains read-only and local-note-only.
 
 ## Recommended next controlled part
 
@@ -71,4 +75,16 @@ Do not start by editing. First inspect files, confirm clean repo, run tests, the
 
 ## Recommended next chat opening prompt
 
-Continue the JEE/CAP CSE-AI Job & Placement Simulator from docs/NEXT_CHAT_HANDOFF.md. First help me run startup verification commands. Do not change files until repo is clean and tests pass. Next likely task is Maharashtra v1.0 readiness: inspect BLK-001 to BLK-004 and choose the smallest safe implementation step for source-gated data/provenance/admin workflow.
+Continue the JEE/CAP CSE-AI Job & Placement Simulator from docs/NEXT_CHAT_HANDOFF.md. Use Codespaces only for execution. First run startup verification commands. Do not change files until repo is clean and 30 tests pass. Current product direction is Maharashtra v1.0 readiness. Latest known good commit should be 94b11c6 Add publication review checklist UI. Next likely task is to inspect /api/readiness and docs/ISSUES_AND_BLOCKERS.md, then choose the smallest safe source-gated step for BLK-001 to BLK-004. Do not promote hidden rows.
+
+
+## Execution rule after 2026-05-03 break
+
+Use Codespaces as the execution environment. ChatGPT should guide with copy-paste commands, and the user should paste terminal outputs. Do not rely on GitHub connector edits for this project unless explicitly requested. Before any edit, run startup verification commands and confirm clean working tree plus expected tests passing.
+
+Current known-good checkpoint before break:
+- Commit: 94b11c6 Add publication review checklist UI
+- Tests: 30 passing
+- Scope: Maharashtra only
+- Product direction: Maharashtra v1.0 readiness
+- Data safety: do not promote hidden rows or set publish_default=yes until required publication checks pass.
