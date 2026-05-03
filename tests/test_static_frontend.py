@@ -41,6 +41,7 @@ class StaticFrontendTests(unittest.TestCase):
 
         required_snippets = [
             '<section id="programSummary"',
+            '<section id="publicationReview"',
             'data-check="cutoff_verified"',
             'data-check="rank_type_verified"',
             'data-check="placement_denominator_verified"',
@@ -55,6 +56,19 @@ class StaticFrontendTests(unittest.TestCase):
 
         for snippet in required_snippets:
             self.assertIn(snippet, text, f"review.html missing required snippet: {snippet}")
+
+    def test_review_page_consumes_publication_review_api(self):
+        html = (FRONTEND_DIR / "review.html").read_text(encoding="utf-8")
+        js = (FRONTEND_DIR / "review.js").read_text(encoding="utf-8")
+
+        self.assertIn("publication-review API", html)
+        self.assertIn("/api/publication-review/", js)
+        self.assertIn("renderPublicationReview", js)
+        self.assertIn("can_publish_default", js)
+        self.assertIn("all_required_checks_passed", js)
+        self.assertIn("pending_or_failed_check_keys", js)
+        self.assertIn("publication_checks", js)
+        self.assertIn("A row remains internal unless every required v1.0 publication check passes", html)
 
 
 if __name__ == "__main__":

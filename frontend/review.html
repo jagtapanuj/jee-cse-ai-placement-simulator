@@ -13,11 +13,11 @@
       <h1>Program Review Checklist</h1>
       <p class="sub">
         This page helps review one program row before it can ever become public-ready.
-        It does not edit the dataset, publish rows, or change scores.
+        It reads the v1.0 publication checks from the publication-review API, but it does not edit the dataset, publish rows, or change scores.
       </p>
       <div class="warning">
         Local checklist values are saved only in this browser through localStorage.
-        They are review notes, not official data updates.
+        They are review notes, not official data updates. A row remains internal unless every required v1.0 publication check passes in the source data.
       </div>
       <p>
         <a href="/queue.html">← Back to verification queue</a>
@@ -27,10 +27,11 @@
     </section>
 
     <section id="programSummary" class="summary"></section>
+    <section id="publicationReview" class="summary"></section>
 
     <section class="card">
-      <h2>Verification checklist</h2>
-      <p class="muted">Use this checklist to decide what evidence is still missing.</p>
+      <h2>Local reviewer notes</h2>
+      <p class="muted">Use this browser-only checklist to record what still needs verification. It does not override the publication-review API.</p>
 
       <div class="checklist">
         <label class="check"><input type="checkbox" data-check="cutoff_verified" /> Admission cutoff row verified from official source</label>
