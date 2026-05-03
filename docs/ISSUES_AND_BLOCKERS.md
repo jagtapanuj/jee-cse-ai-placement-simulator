@@ -60,5 +60,5 @@ The current app is a Maharashtra-only local pilot. It is not ready for public la
 1. Visually test the source drawer button.
 2. Inspect and fix README run instructions if outdated.
 3. Inspect `/api/compare` support in the dependency-free server.
-4. Push toward Maharashtra beta readiness: source-gated data, schema/provenance, admin workflow, and scoring hardening.
+4. Push toward Maharashtra v1.0 readiness: source-gated data, schema/provenance, admin workflow, and scoring hardening.
 5. Plan the next real architecture step: proper schema/provenance/admin workflow.

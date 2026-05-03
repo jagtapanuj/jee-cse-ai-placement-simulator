@@ -54,13 +54,13 @@ The server terminal staying busy is normal. Stop it with Ctrl+C.
 ## Remaining important blockers
 
 Open blockers are tracked in docs/ISSUES_AND_BLOCKERS.md.
-Most important next blockers: BLK-001 to BLK-004. The project is now moving from stabilization into Maharashtra-only beta readiness: source-gated data, provenance, admin workflow, and public-readiness controls.
+Most important next blockers: BLK-001 to BLK-004. The project is now moving from stabilization into Maharashtra v1.0 readiness: source-gated data, provenance, admin workflow, and public-readiness controls.
 
 ## Recommended next controlled part
 
-Part 8: push toward Maharashtra-only beta readiness with strict source gates and no public overclaiming.
+Part 8: push toward Maharashtra v1.0 readiness with strict source gates and no public overclaiming.
 Do not start by editing. First inspect files, confirm clean repo, run tests, then decide.
 
 ## Recommended next chat opening prompt
 
-Continue the JEE/CAP CSE-AI Job & Placement Simulator from docs/NEXT_CHAT_HANDOFF.md. First help me run startup verification commands. Do not change files until repo is clean and tests pass. Next likely task is Maharashtra beta readiness: inspect BLK-001 to BLK-004 and choose the smallest safe implementation step for source-gated data/provenance/admin workflow.
+Continue the JEE/CAP CSE-AI Job & Placement Simulator from docs/NEXT_CHAT_HANDOFF.md. First help me run startup verification commands. Do not change files until repo is clean and tests pass. Next likely task is Maharashtra v1.0 readiness: inspect BLK-001 to BLK-004 and choose the smallest safe implementation step for source-gated data/provenance/admin workflow.

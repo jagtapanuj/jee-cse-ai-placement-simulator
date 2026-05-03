@@ -6,12 +6,12 @@ from app.version import APP_VERSION, DATA_VERSION, DATA_SCOPE, version_payload
 
 
 class VersionConsistencyTests(unittest.TestCase):
-    def test_version_payload_has_expected_beta_scope(self):
+    def test_version_payload_has_expected_maharashtra_scope(self):
         payload = version_payload()
         self.assertEqual(payload["status"], "ok")
         self.assertEqual(payload["app_version"], APP_VERSION)
         self.assertEqual(payload["data_version"], DATA_VERSION)
-        self.assertIn("Maharashtra", DATA_SCOPE)
+        self.assertEqual(DATA_SCOPE, "Maharashtra-only CSE/IT/AI/DS")
 
     def test_core_payloads_use_central_data_version(self):
         self.assertEqual(data_quality_summary()["data_version"], DATA_VERSION)

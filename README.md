@@ -1,6 +1,6 @@
-# Maharashtra CSE/AI Job & Placement Simulator — Local Beta v1
+# Maharashtra CSE/AI Job & Placement Simulator
 
-This is the stabilized Maharashtra-only local beta implementation of the JEE/CAP CSE-AI job and placement simulator.
+This is the Maharashtra-only implementation of the JEE/CAP CSE-AI job and placement simulator.
 
 It converts the v6 verified/staged dataset into a small runnable app with:
 
@@ -10,7 +10,7 @@ It converts the v6 verified/staged dataset into a small runnable app with:
 - dependency-free HTTP server + minimal UI
 - source drawer endpoint
 - compare endpoint
-- centralized app/data version naming
+- centralized industry-standard app/data versioning
 - regression tests
 - data-quality tests
 - PostgreSQL starter schema/seed files
